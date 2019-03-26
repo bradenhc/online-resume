@@ -31,6 +31,14 @@ const config = {
                                 }
                             ],
                             '@babel/preset-react'
+                        ],
+                        plugins: [
+                            [
+                                'module-resolver',
+                                {
+                                    root: ['./src']
+                                }
+                            ]
                         ]
                     }
                 }

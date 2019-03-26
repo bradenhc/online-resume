@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Text from '../styles/Text';
-import Button from '../styles/Button';
+import Text from 'styles/Text';
+import Button from 'styles/Button';
 
 const HeaderLayout = styled.nav`
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
 `;
 
 const RightButtons = styled.div`

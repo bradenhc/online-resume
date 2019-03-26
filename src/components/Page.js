@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Header from '../components/Header';
+import Banner from 'components/Banner';
+import Header from 'components/Header';
+import Content from 'components/Content/';
 
 const Background = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 `;
 
-const Banner = styled.div`
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 500px;
-    background-color: ${({ theme }) => theme.colors.primary.main};
-`;
-
-class PageLayout extends Component {
+class Page extends Component {
     constructor(props) {
         super(props);
     }
@@ -26,9 +20,10 @@ class PageLayout extends Component {
             <Background>
                 <Banner />
                 <Header />
+                <Content />
             </Background>
         );
     }
 }
 
-export default PageLayout;
+export default Page;

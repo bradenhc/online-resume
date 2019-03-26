@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PageLayout from './layout/Page';
+import Page from 'components/Page';
 
 class App extends Component {
     constructor(props) {
@@ -7,7 +7,7 @@ class App extends Component {
     }
 
     render() {
-        return <PageLayout />;
+        return <Page />;
     }
 }
 

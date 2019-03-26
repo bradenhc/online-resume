@@ -12,5 +12,9 @@ export default {
             dark: '#604a00',
             text: '#ccc'
         }
+    },
+    background: {
+        primary: '#fff',
+        contrast: '#2c2c2c'
     }
 };
