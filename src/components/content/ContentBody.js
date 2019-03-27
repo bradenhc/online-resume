@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import EducationContent from 'components/content/education/EducationContent';
+import ContentBodyEducation from 'components/content/ContentBodyEducation';
+import ContentBodyExperience from 'components/content/ContentBodyExperience';
 
 const ContentBodyContainer = styled.div`
     padding: 15px;
@@ -16,7 +17,8 @@ class ContentBody extends Component {
         return (
             <ContentBodyContainer>
                 <Switch>
-                    <Route path="/education" component={EducationContent} />
+                    <Route path="/education" component={ContentBodyEducation} />
+                    <Route path="/experience" component={ContentBodyExperience} />
                 </Switch>
             </ContentBodyContainer>
         );

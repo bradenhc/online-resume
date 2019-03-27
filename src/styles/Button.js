@@ -24,7 +24,7 @@ export default styled.button`
 
     &:hover {
         background-color: ${({ theme, color = 'primary' }) =>
-            color === 'primary' ? theme.colors.primary.light : theme.colors.secondary.light};
+            color === 'primary' ? theme.colors.primary.emphasis : theme.colors.secondary.light};
     }
 
     &:focus,

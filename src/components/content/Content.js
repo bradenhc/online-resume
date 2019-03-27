@@ -12,6 +12,7 @@ const ContentLayout = styled.div`
     min-height: 700px;
     border-radius: 1px;
     width: 70%;
+    max-width: 950px;
 `;
 
 class Content extends Component {

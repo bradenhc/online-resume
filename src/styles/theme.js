@@ -4,7 +4,8 @@ export default {
             main: '#002e5d',
             light: '#004a97',
             dark: '#001f3e',
-            text: '#eee'
+            text: '#eee',
+            emphasis: 'rgba(204, 204, 204, 0.4)'
         },
         secondary: {
             main: '#8f6e00',

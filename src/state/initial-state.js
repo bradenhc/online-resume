@@ -41,7 +41,7 @@ export default {
                     location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
-                        content: ''
+                        content: 'assets/images/icons/osu.jpg'
                     },
                     gpa: '3.80',
                     startDate: 'September 2018',
@@ -58,13 +58,14 @@ export default {
                     location: 'Provo, UT',
                     icon: {
                         type: 'image',
-                        content: ''
+                        content: 'assets/images/icons/byu.png'
                     },
                     gpa: '3.66',
                     startDate: 'September 2012',
                     endDate: 'April 2018',
                     highlights: [
-                        'Coursework includes software engineering, distributed systems, networking, computer security, data structures, operating systems'
+                        'Coursework includes software engineering, distributed systems, networking, ' +
+                            'computer security, data structures, operating systems'
                     ],
                     tags: [],
                     url: 'https://byu.edu/'
@@ -81,12 +82,21 @@ export default {
                     location: 'Boulder, CO',
                     icon: {
                         type: 'image',
-                        content: ''
+                        content: 'assets/images/icons/ng.jpg'
                     },
                     startDate: 'May 2017',
                     endDate: 'January 2019',
-                    highlights: [],
-                    tags: [],
+                    highlights: [
+                        'Assisted in architecting a containerized environment for data processing applications using ' +
+                            'Docker and Kubernetes',
+                        'Developed a framework in Java and C++ for altering the workflow of distributed data ' +
+                            'processing applications at runtime, reducing coupling among system components',
+                        'Developed a C++ API for applications running in a modular framework environment, reducing ' +
+                            'third-party app code count by 70%',
+                        'Designed and implemented front-end user interfaces in Angular and React for various company ' +
+                            'projects, assisting the company in moving toward a cloud-centric environment'
+                    ],
+                    tags: ['java', 'c++', 'node', 'javascript', 'react', 'angular', 'docker', 'kubernetes'],
                     url: 'http://www.northropgrumman.com/'
                 }
             ]
