@@ -11,7 +11,7 @@ const ContentLayout = styled.div`
     background-color: ${({ theme }) => theme.background.primary};
     min-height: 700px;
     border-radius: 1px;
-    width: 70%;
+    width: 90%;
     max-width: 950px;
     margin-bottom: 50px;
 `;
