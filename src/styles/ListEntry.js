@@ -1,4 +1,6 @@
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import Icon from 'styles/Icon';
 
 export const ListEntryItem = styled.div`
     border-bottom: 1px solid #ccc;
@@ -15,8 +17,7 @@ export const EntryHeader = styled.div`
     display: flex;
     align-items: center;
 `;
-
-export const EntryIcon = styled.img`
+const iconStyle = `
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -24,15 +25,45 @@ export const EntryIcon = styled.img`
     margin: 5px;
 `;
 
+const SvgIcon = styled(Icon)`
+    ${iconStyle}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const ImageIcon = styled.img`
+    ${iconStyle}
+`;
+
+export class EntryIcon extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const { type, content } = this.props.icon;
+
+        if (content === '') {
+            return <SvgIcon />;
+        }
+        if (type === 'svg') {
+            return <SvgIcon name={content} />;
+        } else {
+            return <ImageIcon src={content} />;
+        }
+    }
+}
+
+export const EI = ({ icon: { type = 'svg', content = 'code' } }) => {};
+
 export const EntryHeaderContent = styled.div`
     margin-left: 15px;
     display: flex;
     width: 100%;
 `;
 
-export const EntryHeaderContentLeft = styled.div`
-    
-`;
+export const EntryHeaderContentLeft = styled.div``;
 
 export const EntryHeaderContentRight = styled.div`
     margin-left: auto;

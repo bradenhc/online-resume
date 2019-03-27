@@ -24,7 +24,7 @@ const ExperienceContentContainer = styled.div`
 const ExperienceEntry = ({ company, position, location, startDate, endDate, highlights, icon }) => (
     <ListEntryItem>
         <EntryHeader>
-            <EntryIcon src={icon.content} />
+            <EntryIcon icon={icon} />
             <EntryHeaderContent>
                 <EntryHeaderContentLeft>
                     <EntryHeading>{position}</EntryHeading>

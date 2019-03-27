@@ -16,16 +16,16 @@ export default {
         {
             name: 'GitHub',
             icon: {
-                type: 'fontawesome',
-                content: 'fab fa-github'
+                type: 'svg',
+                content: 'github'
             },
             url: 'https://github.com/bradenhc'
         },
         {
             name: 'LinkedIn',
             icon: {
-                type: 'fontawesome',
-                content: 'fab fa-linkedin'
+                type: 'svg',
+                content: 'linkedin'
             },
             url: 'https://linkedin.com/bradenhitchcock'
         }
@@ -107,13 +107,16 @@ export default {
             content: [
                 {
                     title: 'Synergen',
-                    subtitle: 'Goal-centric social networking',
+                    subtitle: 'Goal-centric Social Networking Platform',
                     icon: {
                         type: 'image',
                         content: ''
                     },
-                    highlights: [],
-                    tags: [],
+                    highlights: [
+                        'Managed, designed, and developed a web application using React/Redux, Node.js/Express, ' +
+                            'and MongoDB to facilitate goal-inspired interactions among users'
+                    ],
+                    tags: ['node', 'javascript', 'react', 'express', 'redux', 'mongo', 'manage'],
                     code: 'https://github.com/synergy-gen',
                     url: 'https://synergen.us/'
                 }
@@ -124,17 +127,23 @@ export default {
             route: '/leadership',
             content: [
                 {
-                    title: '',
-                    location: '',
+                    title: 'Volunteer Representative',
+                    organization: 'The Church of Jesus Christ of Latter-day Saints',
+                    location: 'Daejeon, South Korea',
                     icon: {
                         type: 'image',
-                        content: ''
+                        content: 'assets/images/icons/church-of-jesus-christ.png'
                     },
-                    startDate: '',
-                    endDate: '',
-                    highlights: [],
-                    tags: [],
-                    url: ''
+                    startDate: 'July 2013',
+                    endDate: 'July 2015',
+                    highlights: [
+                        'Trained volunteers on improving their teaching, language, learning, and inter-personal ' +
+                            'skills',
+                        'Gained fluency in Korean, facilitating our objective to assist others in improving ' +
+                            'the quality of their lives and acheiving their goals'
+                    ],
+                    tags: ['service', 'leader', 'korean', 'language', 'social', 'goals'],
+                    url: 'https://churchofjesuschrist.org/'
                 }
             ]
         },

@@ -7,35 +7,27 @@ import {
     EntryHeader,
     EntryHeaderContent,
     EntryHeaderContentLeft,
-    EntryHeaderContentRight,
     EntryIcon,
     EntryHeading,
     EntrySubheading,
-    AdditionalInfo,
     EntryContent
 } from 'styles/ListEntry';
 
-const EducationContentContainer = styled.div`
+const ProjectContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
 `;
 
-const EducationEntry = ({ school, degree, location, endDate, gpa, highlights, icon }) => (
+const ProjectEntry = ({ subtitle, title, highlights, icon }) => (
     <ListEntryItem>
         <EntryHeader>
             <EntryIcon icon={icon} />
             <EntryHeaderContent>
                 <EntryHeaderContentLeft>
-                    <EntryHeading>{degree}</EntryHeading>
-                    <EntrySubheading>
-                        {school}, {location}
-                    </EntrySubheading>
+                    <EntryHeading>{title}</EntryHeading>
+                    <EntrySubheading>{subtitle}</EntrySubheading>
                 </EntryHeaderContentLeft>
-                <EntryHeaderContentRight>
-                    <AdditionalInfo>{endDate}</AdditionalInfo>
-                    <AdditionalInfo>{gpa} GPA</AdditionalInfo>
-                </EntryHeaderContentRight>
             </EntryHeaderContent>
         </EntryHeader>
         <EntryContent>
@@ -50,26 +42,26 @@ const EducationEntry = ({ school, degree, location, endDate, gpa, highlights, ic
     </ListEntryItem>
 );
 
-class ContentBodyEducation extends Component {
+class ContentBodyProjects extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        const { education } = this.props;
+        const { projects } = this.props;
 
         return (
-            <EducationContentContainer>
-                {education.content.map(e => (
-                    <EducationEntry key={e.school} {...e} />
+            <ProjectContentContainer>
+                {projects.content.map(p => (
+                    <ProjectEntry key={p.title} {...p} />
                 ))}
-            </EducationContentContainer>
+            </ProjectContentContainer>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    education: state.sections.find(s => s.route === '/education')
+    projects: state.sections.find(s => s.route === '/projects')
 });
 
-export default connect(mapStateToProps)(ContentBodyEducation);
+export default connect(mapStateToProps)(ContentBodyProjects);
