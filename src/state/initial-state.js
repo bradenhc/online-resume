@@ -98,6 +98,26 @@ export default {
                     ],
                     tags: ['java', 'c++', 'node', 'javascript', 'react', 'angular', 'docker', 'kubernetes'],
                     url: 'http://www.northropgrumman.com/'
+                },
+                {
+                    company: 'Brigham Young University Alumni Association',
+                    position: 'Web Developer',
+                    location: 'Provo, UT',
+                    icon: {
+                        type: 'image',
+                        content: 'assets/images/icons/byu.png'
+                    },
+                    startDate: 'Janurary 2016',
+                    endDate: 'April 2017',
+                    highlights: [
+                        'Designed and implemented online tools with various web technologies, including' +
+                            'PHP, MySQL, and JavaScript, successfully automating reporting responsibilities for ' +
+                            'alumni leaders',
+                        'Assisted in planning and implementing the upgrade of primary association websites to ' +
+                            'use the open source Drupal PHP framework, significantly reducing maintenance overhead'
+                    ],
+                    tags: ['web', 'javascript', 'php', 'drupal', 'jquery', 'mysql', 'sql', 'coldfusion'],
+                    url: 'http://alumni.byu.edu/'
                 }
             ]
         },
@@ -148,9 +168,9 @@ export default {
             ]
         },
         {
-            name: 'Additional Interests',
-            route: '/skills-interests',
-            content: []
+            name: 'Honors & Awards',
+            route: '/honors-awards',
+            content: ['Eagle Scout Award', 'U.S. Governemtn issued secret security clearance']
         }
     ]
 };

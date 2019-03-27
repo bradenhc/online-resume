@@ -48,7 +48,7 @@ class Header extends Component {
                 </Button>
                 <RightButtons>
                     {links.map(l => (
-                        <Link href={l.url} target="_blank">
+                        <Link key={l.name} href={l.url} target="_blank">
                             <LinkButton>
                                 <Text>{l.name}</Text>
                                 <LinkIcon>

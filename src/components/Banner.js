@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 const BannerStyle = styled.div`
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: -1;
     width: 100%;
