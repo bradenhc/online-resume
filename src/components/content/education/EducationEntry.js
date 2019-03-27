@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Text from 'styles/Text';
 import {
-    Entry,
+    ListEntryItem,
     EntryHeader,
     EntryHeaderContent,
     EntryHeaderContentLeft,
     EntryHeaderContentRight,
-    Icon,
-    DegreeInfo,
-    SchoolName,
+    EntryIcon,
+    EntryHeading,
+    EntrySubheading,
     AdditionalInfo,
     EntryContent
-} from 'components/content/education/EducationEntry.styles';
+} from 'styles/ListEntry';
 
 class EducationEntry extends Component {
     constructor(props) {
@@ -23,15 +23,15 @@ class EducationEntry extends Component {
         const { school, degree, location, endDate, gpa, highlights } = this.props.education;
 
         return (
-            <Entry>
+            <ListEntryItem>
                 <EntryHeader>
-                    <Icon />
+                    <EntryIcon />
                     <EntryHeaderContent>
                         <EntryHeaderContentLeft>
-                            <DegreeInfo>{degree}</DegreeInfo>
-                            <SchoolName>
+                            <EntryHeading>{degree}</EntryHeading>
+                            <EntrySubheading>
                                 {school}, {location}
-                            </SchoolName>
+                            </EntrySubheading>
                         </EntryHeaderContentLeft>
                         <EntryHeaderContentRight>
                             <AdditionalInfo>{endDate}</AdditionalInfo>
@@ -48,7 +48,7 @@ class EducationEntry extends Component {
                         ))}
                     </ul>
                 </EntryContent>
-            </Entry>
+            </ListEntryItem>
         );
     }
 }
