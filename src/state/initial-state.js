@@ -47,50 +47,30 @@ export default {
     ],
     sections: [
         {
-            name: 'Education',
-            route: '/education',
+            name: 'Experience',
+            route: '/experience',
             content: [
                 {
-                    school: 'Oregon State University',
-                    degree: 'M.S. Computer Science - Software Innovation',
+                    company: 'Oregon State University IoT Alliance',
+                    position: 'Web Developer/Community Coordinator',
                     location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
                         content: 'assets/images/icons/osu.jpg'
                     },
-                    gpa: '3.80',
-                    startDate: 'September 2018',
-                    endDate: 'March 2020',
+                    startDate: 'January 2019',
+                    endDate: 'Present',
                     highlights: [
-                        'Coursework includes software engineering, software project management, distributed systems, database management systems'
+                        'Led redesign of the legacy alliance website, moving away from Drupal to plain PHP to increase ' +
+                            'maintainability',
+                        'Implemented resource respository for alliance materials, facilitating distribution of ' +
+                            'learning resources for students attending events and seminars sponsored by the alliance',
+                        'Integrated IoT site with existing EECS Capstone project site, allowing students to create a ' +
+                            'profile indicating their participation and efforts in company-sponsored capstone projects'
                     ],
-                    tags: [],
-                    url: 'https://oregonstate.edu/'
+                    tags: ['php', 'iot', 'manage', 'javascript', 'html', 'css'],
+                    url: 'http://groups.engr.oregonstate.edu/IOTA'
                 },
-                {
-                    school: 'Brigham Young University',
-                    degree: 'B.S. Computer Science',
-                    location: 'Provo, UT',
-                    icon: {
-                        type: 'image',
-                        content: 'assets/images/icons/byu.png'
-                    },
-                    gpa: '3.66',
-                    startDate: 'September 2012',
-                    endDate: 'April 2018',
-                    highlights: [
-                        'Coursework includes software engineering, distributed systems, networking, ' +
-                            'computer security, data structures, operating systems'
-                    ],
-                    tags: [],
-                    url: 'https://byu.edu/'
-                }
-            ]
-        },
-        {
-            name: 'Experience',
-            route: '/experience',
-            content: [
                 {
                     company: 'Northrop Grumman',
                     position: 'Software Development Intern',
@@ -131,8 +111,49 @@ export default {
                         'Assisted in planning and implementing the upgrade of primary association websites to ' +
                             'use the open source Drupal PHP framework, significantly reducing maintenance overhead'
                     ],
-                    tags: ['web', 'javascript', 'php', 'drupal', 'jquery', 'mysql', 'sql', 'coldfusion'],
+                    tags: ['web', 'javascript', 'php', 'drupal', 'jquery', 'mysql', 'sql', 'coldfusion', 'html', 'css'],
                     url: 'http://alumni.byu.edu/'
+                }
+            ]
+        },
+        {
+            name: 'Education',
+            route: '/education',
+            content: [
+                {
+                    school: 'Oregon State University',
+                    degree: 'M.S. Computer Science - Software Innovation',
+                    location: 'Corvallis, OR',
+                    icon: {
+                        type: 'image',
+                        content: 'assets/images/icons/osu.jpg'
+                    },
+                    gpa: '3.80',
+                    startDate: 'September 2018',
+                    endDate: 'March 2020',
+                    highlights: [
+                        'Coursework includes software engineering, software project management, distributed systems, database management systems'
+                    ],
+                    tags: [],
+                    url: 'https://oregonstate.edu/'
+                },
+                {
+                    school: 'Brigham Young University',
+                    degree: 'B.S. Computer Science',
+                    location: 'Provo, UT',
+                    icon: {
+                        type: 'image',
+                        content: 'assets/images/icons/byu.png'
+                    },
+                    gpa: '3.66',
+                    startDate: 'September 2012',
+                    endDate: 'April 2018',
+                    highlights: [
+                        'Coursework includes software engineering, distributed systems, networking, ' +
+                            'computer security, data structures, operating systems'
+                    ],
+                    tags: [],
+                    url: 'https://byu.edu/'
                 }
             ]
         },

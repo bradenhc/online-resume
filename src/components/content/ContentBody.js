@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import ContentBodyEducation from 'components/content/ContentBodyEducation';
 import ContentBodyExperience from 'components/content/ContentBodyExperience';
@@ -20,8 +20,9 @@ class ContentBody extends Component {
         return (
             <ContentBodyContainer>
                 <Switch>
-                    <Route path="/education" component={ContentBodyEducation} />
+                    <Route exact path="/" render={() => <Redirect to="/experience" />} />
                     <Route path="/experience" component={ContentBodyExperience} />
+                    <Route path="/education" component={ContentBodyEducation} />
                     <Route path="/projects" component={ContentBodyProjects} />
                     <Route path="/leadership" component={ContentBodyLeadership} />
                     <Route path="/honors-awards" component={ContentBodyHonors} />

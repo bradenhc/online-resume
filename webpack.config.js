@@ -51,7 +51,7 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
-        new CopyPlugin([{ from: 'assets', to: 'dist/assets' }, { from: 'assets/favicon.ico', to: 'dist' }])
+        new CopyPlugin([{ from: 'assets', to: 'assets' }])
     ]
 };
 
