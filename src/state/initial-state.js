@@ -7,9 +7,16 @@ export default {
     contact: {
         email: 'hitchcock.braden@gmail.com',
         phone: '(720) 899-1356',
-        address: '1234 Street Apt 4 City, ST 00000'
+        address: ''
     },
-    about: 'This is a brief introduction about who I am, what I am interested in, what I want to be, etc.',
+    about:
+        'As an aspiring software architect, I am passionate about well-designed systems that ' +
+        'provide the highest levels of maintainability, flexibility, and efficiency. I have extensive experience ' +
+        'with microservice-oriented systems and implementing highly available ' +
+        'architectures. Most recently with my internship at Northrop Grumman, I was able to contribute to cutting ' +
+        'edge applications by researching state-of-the-art technologies and incorporating them into our software. ' +
+        'My professional experience consists primarily of designing and implementing flexible software systems, including ' +
+        'distributed system software architectures, websites, web applications, and online tools.',
     image: 'assets/images/profile-formal-cropped.jpg',
     banner: 'assets/images/banner.png',
     links: [
@@ -28,6 +35,14 @@ export default {
                 content: 'linkedin'
             },
             url: 'https://linkedin.com/in/bradenhitchcock'
+        },
+        {
+            name: 'Facebook',
+            icon: {
+                type: 'svg',
+                content: 'facebook'
+            },
+            url: 'https://www.facebook.com/bradenhc'
         }
     ],
     sections: [
@@ -170,7 +185,7 @@ export default {
         {
             name: 'Honors & Awards',
             route: '/honors-awards',
-            content: ['Eagle Scout Award', 'U.S. Governemtn issued secret security clearance']
+            content: ['Eagle Scout Award', 'U.S. Government issued secret security clearance']
         }
     ]
 };

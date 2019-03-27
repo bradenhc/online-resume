@@ -30,7 +30,7 @@ const LinkButton = styled(Button)`
 `;
 
 const LinkIcon = styled.span`
-    margin-left: 10px;
+    padding: 3px;
 `;
 
 class Header extends Component {
@@ -43,16 +43,12 @@ class Header extends Component {
 
         return (
             <HeaderLayout>
-                <Button>
-                    <Text>My Profile</Text>
-                </Button>
                 <RightButtons>
                     {links.map(l => (
                         <Link key={l.name} href={l.url} target="_blank">
                             <LinkButton>
-                                <Text>{l.name}</Text>
                                 <LinkIcon>
-                                    <Icon name={l.icon.content} />
+                                    <Icon name={l.icon.content} size='lg' />
                                 </LinkIcon>
                             </LinkButton>
                         </Link>
