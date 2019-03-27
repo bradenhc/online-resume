@@ -18,14 +18,14 @@ export const EntryHeader = styled.div`
     align-items: center;
 `;
 const iconStyle = `
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
     border-radius: 50%;
     background-color: #ccc;
     margin: 5px;
 `;
 
-const SvgIcon = styled(Icon)`
+const SvgIcon = styled.span`
     ${iconStyle}
     display: flex;
     align-items: center;
@@ -45,10 +45,18 @@ export class EntryIcon extends Component {
         const { type, content } = this.props.icon;
 
         if (content === '') {
-            return <SvgIcon />;
+            return (
+                <SvgIcon>
+                    <Icon />
+                </SvgIcon>
+            );
         }
         if (type === 'svg') {
-            return <SvgIcon name={content} />;
+            return (
+                <SvgIcon>
+                    <Icon name={content} />
+                </SvgIcon>
+            );
         } else {
             return <ImageIcon src={content} />;
         }

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import Text from 'styles/Text';
 import Button from 'styles/Button';
+import Icon from 'styles/Icon';
 
 const HeaderLayout = styled.nav`
     align-self: stretch;
@@ -14,6 +16,21 @@ const HeaderLayout = styled.nav`
 
 const RightButtons = styled.div`
     margin-left: auto;
+    display: flex;
+`;
+
+const Link = styled.a`
+    text-decoration: none;
+    color: inherit;
+`;
+
+const LinkButton = styled(Button)`
+    display: flex;
+    align-items: center;
+`;
+
+const LinkIcon = styled.span`
+    margin-left: 10px;
 `;
 
 class Header extends Component {
@@ -22,22 +39,32 @@ class Header extends Component {
     }
 
     render() {
+        const { links } = this.props;
+
         return (
             <HeaderLayout>
                 <Button>
                     <Text>My Profile</Text>
                 </Button>
                 <RightButtons>
-                    <Button>
-                        <Text>LinkedIn</Text>
-                    </Button>
-                    <Button>
-                        <Text>GitHub</Text>
-                    </Button>
+                    {links.map(l => (
+                        <Link href={l.url} target="_blank">
+                            <LinkButton>
+                                <Text>{l.name}</Text>
+                                <LinkIcon>
+                                    <Icon name={l.icon.content} />
+                                </LinkIcon>
+                            </LinkButton>
+                        </Link>
+                    ))}
                 </RightButtons>
             </HeaderLayout>
         );
     }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    links: state.links
+});
+
+export default connect(mapStateToProps)(Header);

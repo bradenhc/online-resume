@@ -15,23 +15,15 @@ class Icon extends Component {
     }
 
     render() {
-        const { className, name } = this.props;
+        const { name } = this.props;
 
         switch (name) {
             case 'github':
             case 'linkedin':
-                return (
-                    <span className={className}>
-                        <FontAwesomeIcon icon={name} />
-                    </span>
-                );
+                return <FontAwesomeIcon icon={['fab', name]} />;
 
             default:
-                return (
-                    <span className={className}>
-                        <FontAwesomeIcon icon={'code'} />
-                    </span>
-                );
+                return <FontAwesomeIcon icon={'code'} />;
         }
     }
 }

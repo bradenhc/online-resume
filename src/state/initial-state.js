@@ -27,7 +27,7 @@ export default {
                 type: 'svg',
                 content: 'linkedin'
             },
-            url: 'https://linkedin.com/bradenhitchcock'
+            url: 'https://linkedin.com/in/bradenhitchcock'
         }
     ],
     sections: [
