@@ -11,6 +11,7 @@ export default {
     },
     about: 'This is a brief introduction about who I am, what I am interested in, what I want to be, etc.',
     image: 'assets/images/profile-formal-cropped.jpg',
+    banner: 'assets/images/banner.png',
     links: [
         {
             name: 'GitHub',
@@ -36,18 +37,37 @@ export default {
             content: [
                 {
                     school: 'Oregon State University',
-                    degree: '',
-                    location: '',
+                    degree: 'M.S. Computer Science - Software Innovation',
+                    location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
                         content: ''
                     },
-                    gpa: '',
-                    startDate: '',
-                    endDate: '',
-                    highlights: [],
+                    gpa: '3.80',
+                    startDate: 'September 2018',
+                    endDate: 'March 2020',
+                    highlights: [
+                        'Coursework includes software engineering, software project management, distributed systems, database management systems'
+                    ],
                     tags: [],
-                    url: ''
+                    url: 'https://oregonstate.edu/'
+                },
+                {
+                    school: 'Brigham Young University',
+                    degree: 'B.S. Computer Science',
+                    location: 'Provo, UT',
+                    icon: {
+                        type: 'image',
+                        content: ''
+                    },
+                    gpa: '3.66',
+                    startDate: 'September 2012',
+                    endDate: 'April 2018',
+                    highlights: [
+                        'Coursework includes software engineering, distributed systems, networking, computer security, data structures, operating systems'
+                    ],
+                    tags: [],
+                    url: 'https://byu.edu/'
                 }
             ]
         },
@@ -58,16 +78,16 @@ export default {
                 {
                     company: 'Northrop Grumman',
                     position: 'Software Development Intern',
-                    location: '',
+                    location: 'Boulder, CO',
                     icon: {
                         type: 'image',
                         content: ''
                     },
-                    startDate: '',
-                    endDate: '',
+                    startDate: 'May 2017',
+                    endDate: 'January 2019',
                     highlights: [],
                     tags: [],
-                    url: ''
+                    url: 'http://www.northropgrumman.com/'
                 }
             ]
         },

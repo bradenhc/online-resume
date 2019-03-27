@@ -1,18 +1,25 @@
 import styled from 'styled-components';
 
 export default styled.button`
-    ${({ theme, color = 'primary' }) =>
+    ${({
+        theme,
+        // @ts-ignore
+        fill = false,
+        color = 'primary'
+    }) =>
         color === 'primary'
             ? `
-        background-color: ${theme.colors.primary.main}
-        color: ${theme.colors.primary.text};
-    `
+        color: ${theme.font.colors.contrast};
+        ${fill ? `background-color: ${theme.colors.primary.main}` : `background-color: transparent`};
+        `
             : `
-        background-color: ${theme.colors.secondary.main}
-        color: ${theme.colors.secondary.text};`};
+        color: ${theme.font.colors.contrast};
+        ${fill ? `background-color: ${theme.colors.secondary.main}` : `background-color: transparent`};
+    `};
     padding: 3px 6px;
     border: none;
     border-radius: 5px;
+    margin: 5px;
     cursor: pointer;
 
     &:hover {

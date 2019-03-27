@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
 const BannerStyle = styled.div`
     position: fixed;
@@ -7,7 +8,13 @@ const BannerStyle = styled.div`
     z-index: -1;
     width: 100%;
     height: 400px;
-    background-color: ${({ theme }) => theme.colors.primary.main};
+    background-color: #000;
+`;
+
+const BannerImage = styled.img`
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
 `;
 
 class Banner extends Component {
@@ -16,8 +23,16 @@ class Banner extends Component {
     }
 
     render() {
-        return <BannerStyle />;
+        return (
+            <BannerStyle>
+                <BannerImage src={this.props.image} />
+            </BannerStyle>
+        );
     }
 }
 
-export default Banner;
+const mapStateToProps = state => ({
+    image: state.banner
+});
+
+export default connect(mapStateToProps)(Banner);

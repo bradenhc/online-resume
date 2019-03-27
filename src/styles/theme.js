@@ -16,5 +16,14 @@ export default {
     background: {
         primary: '#fff',
         contrast: '#2c2c2c'
+    },
+    font: {
+        family: 'Arial, Helvetica, sans-serif',
+        colors: {
+            primary: '#000',
+            secondary: '#ccc',
+            faint: '#777',
+            contrast: '#eee'
+        }
     }
 };

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 import Banner from 'components/Banner';
 import Header from 'components/Header';
 import ContentLayout from 'components/content/Content';
+import { fetchInfoRequest } from 'state/actions';
 
 const Background = styled.div`
     display: flex;
@@ -13,6 +15,10 @@ const Background = styled.div`
 class Page extends Component {
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.props.onLoad();
     }
 
     render() {
@@ -26,4 +32,11 @@ class Page extends Component {
     }
 }
 
-export default Page;
+const mapDispatchToProps = dispatch => ({
+    onLoad: () => dispatch(fetchInfoRequest())
+});
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Page);
