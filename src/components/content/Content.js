@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Text from 'styles/Text';
+import { BrowserRouter } from 'react-router-dom';
+import ContentHeader from 'components/content/ContentHeader';
+import ContentNavigation from 'components/content/ContentNavigation';
+import ContentBody from 'components/content/ContentBody';
 
 const ContentLayout = styled.div`
     margin-top: 50px;
     box-shadow: 0px 0px 4px ${({ theme }) => theme.colors.primary.dark};
-    margin-left: 100px;
-    margin-right: 100px;
     background-color: ${({ theme }) => theme.background.primary};
     min-height: 700px;
     border-radius: 1px;
-    max-width: 1200px;
-    min-width: 800px;
+    width: 70%;
 `;
 
 class Content extends Component {
@@ -22,7 +22,13 @@ class Content extends Component {
     render() {
         return (
             <ContentLayout>
-                <Text>Hello, world!</Text>
+                <ContentHeader />
+                <BrowserRouter>
+                    <React.Fragment>
+                        <ContentNavigation />
+                        <ContentBody />
+                    </React.Fragment>
+                </BrowserRouter>
             </ContentLayout>
         );
     }

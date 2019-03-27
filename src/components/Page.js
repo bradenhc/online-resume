@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Banner from 'components/Banner';
 import Header from 'components/Header';
-import Content from 'components/Content/';
+import ContentLayout from 'components/content/Content';
 
 const Background = styled.div`
     display: flex;
@@ -20,7 +20,7 @@ class Page extends Component {
             <Background>
                 <Banner />
                 <Header />
-                <Content />
+                <ContentLayout />
             </Background>
         );
     }

@@ -4,10 +4,12 @@ import Text from 'styles/Text';
 import Button from 'styles/Button';
 
 const HeaderLayout = styled.nav`
+    align-self: stretch;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
 `;
 
 const RightButtons = styled.div`

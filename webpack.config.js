@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
     entry: path.join(__dirname, 'src', 'index.js'),
@@ -48,7 +49,10 @@ const config = {
     devServer: {
         historyApiFallback: true
     },
-    plugins: [new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') })]
+    plugins: [
+        new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
+        new CopyPlugin([{ from: 'assets', to: 'dist/assets' }])
+    ]
 };
 
 module.exports = config;

@@ -6,7 +6,7 @@ const BannerStyle = styled.div`
     top: 0;
     z-index: -1;
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color: ${({ theme }) => theme.colors.primary.main};
 `;
 

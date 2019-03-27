@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "jsx": "react",
+        "baseUrl": "./",
+        "checkJs": true,
+        "paths": {
+            "styles/*": ["src/styles/*"],
+            "components/*": ["src/components/*"],
+            "state/*": ["src/state/*"],
+            "api/*": ["src/api/*"],
+            "App": ["src/App"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}
