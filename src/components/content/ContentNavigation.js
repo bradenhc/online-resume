@@ -41,11 +41,11 @@ class ContentNavigation extends Component {
         return (
             <ContentNavigationLayout>
                 {sections.map(section => (
-                    <NavItem key={section.name} active={section.route === location.pathname}>
-                        <NavLink to={section.route} onClick={e => false}>
+                    <NavLink key={section.name} to={section.route} onClick={e => false}>
+                        <NavItem active={section.route === location.pathname}>
                             <Text>{section.name}</Text>
-                        </NavLink>
-                    </NavItem>
+                        </NavItem>
+                    </NavLink>
                 ))}
             </ContentNavigationLayout>
         );

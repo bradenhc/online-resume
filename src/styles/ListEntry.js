@@ -66,12 +66,14 @@ export class EntryIcon extends Component {
 export const EI = ({ icon: { type = 'svg', content = 'code' } }) => {};
 
 export const EntryHeaderContent = styled.div`
+    flex-grow: 1;
     margin-left: 15px;
     display: flex;
-    width: 100%;
 `;
 
-export const EntryHeaderContentLeft = styled.div``;
+export const EntryHeaderContentLeft = styled.div`
+    flex-grow: 1;
+`;
 
 export const EntryHeaderContentRight = styled.div`
     margin-left: auto;
