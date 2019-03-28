@@ -12,7 +12,9 @@ import {
     EntryHeading,
     EntrySubheading,
     AdditionalInfo,
-    EntryContent
+    EntryContent,
+    TagList,
+    Tag
 } from 'styles/ListEntry';
 
 const ExperienceContentContainer = styled.div`
@@ -21,7 +23,7 @@ const ExperienceContentContainer = styled.div`
     align-items: stretch;
 `;
 
-const ExperienceEntry = ({ company, position, location, startDate, endDate, highlights, icon }) => (
+const ExperienceEntry = ({ company, position, location, startDate, endDate, highlights, icon, tags }) => (
     <ListEntryItem>
         <EntryHeader>
             <EntryIcon icon={icon} />
@@ -48,6 +50,11 @@ const ExperienceEntry = ({ company, position, location, startDate, endDate, high
                 ))}
             </ul>
         </EntryContent>
+        <TagList>
+            {tags.map(t => (
+                <Tag>{t}</Tag>
+            ))}
+        </TagList>
     </ListEntryItem>
 );
 

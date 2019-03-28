@@ -104,3 +104,20 @@ export const AdditionalInfo = styled.span`
 `;
 
 export const EntryContent = styled.div``;
+
+export const TagList = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+`;
+
+export const Tag = styled.span`
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: ${({ theme }) => theme.font.family};
+    background-color: ${({ theme }) => theme.colors.primary.emphasis};
+    color: ${({ theme }) => theme.font.colors.primary}
+    opacity: 0.8;
+    border-radius: 10px;
+`;

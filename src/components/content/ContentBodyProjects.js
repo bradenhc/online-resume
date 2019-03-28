@@ -10,7 +10,9 @@ import {
     EntryIcon,
     EntryHeading,
     EntrySubheading,
-    EntryContent
+    EntryContent,
+    TagList,
+    Tag
 } from 'styles/ListEntry';
 
 const ProjectContentContainer = styled.div`
@@ -19,7 +21,7 @@ const ProjectContentContainer = styled.div`
     align-items: stretch;
 `;
 
-const ProjectEntry = ({ subtitle, title, highlights, icon }) => (
+const ProjectEntry = ({ subtitle, title, highlights, icon, tags }) => (
     <ListEntryItem>
         <EntryHeader>
             <EntryIcon icon={icon} />
@@ -39,6 +41,11 @@ const ProjectEntry = ({ subtitle, title, highlights, icon }) => (
                 ))}
             </ul>
         </EntryContent>
+        <TagList>
+            {tags.map(t => (
+                <Tag>{t}</Tag>
+            ))}
+        </TagList>
     </ListEntryItem>
 );
 

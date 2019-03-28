@@ -175,6 +175,21 @@ export default {
                     tags: ['node', 'javascript', 'react', 'express', 'redux', 'mongo', 'manage'],
                     code: 'https://github.com/synergy-gen',
                     url: 'https://synergen.us/'
+                },
+                {
+                    title: 'Online Resume',
+                    subtitle: 'This site right here!',
+                    icon: {
+                        type: 'image',
+                        content: 'assets/images/icons/online-resume.png'
+                    },
+                    highlights: [
+                        'Implemented this site in React/Redux, inspired by online resumes built by collegues and ' +
+                            'fellow students'
+                    ],
+                    tags: ['react', 'redux', 'sagas'],
+                    code: 'https://github.com/bradenhc/online-resume',
+                    url: ''
                 }
             ]
         },
