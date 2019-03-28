@@ -7,22 +7,19 @@ import Text from 'styles/Text';
 
 const ContentNavigationLayout = styled.div`
     align-self: stretch;
-    padding: 10px;
     background-color: ${({ theme }) => theme.colors.primary.main};
     display: flex;
     align-items: center;
 `;
 
 const NavItem = styled.div`
+    padding: 7px 10px 10px 10px;
     cursor: pointer;
     margin: 0px 20px;
-    color: ${({ theme }) => theme.colors.primary.text};
-    border-bottom: 2px solid
-        ${({
-            theme,
-            // @ts-ignore
-            active = false
-        }) => (active ? theme.background.primary : 'transparent')};
+    border-top: 3px solid ${({ theme }) => theme.colors.primary.main}
+    color: ${({ theme, active = false }) => (!active ? theme.colors.primary.text : theme.colors.primary.main)};
+    background-color: ${({ theme, active = false }) => (active ? theme.background.primary : 'transparent')};
+    
 `;
 
 const NavLink = styled(Link)`
