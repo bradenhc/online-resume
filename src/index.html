@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Braden Hitchcock</title>
-        <link rel="shortcut icon" href="assets/favicon.ico" />
+        <title><%= htmlWebpackPlugin.options.variables.title %></title>
+        <base href="<%= htmlWebpackPlugin.options.variables.base %>" />
+        <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.variables.favicon %>" />
         <style>
             html,
             body {

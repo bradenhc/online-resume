@@ -34,7 +34,7 @@ export default {
                 type: 'svg',
                 content: 'linkedin'
             },
-            url: 'https://linkedin.com/in/bradenhitchcock'
+            url: 'https://linkedin.com/in/bradenhc'
         },
         {
             name: 'Facebook',

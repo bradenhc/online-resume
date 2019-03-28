@@ -12,7 +12,8 @@
             "components/*": ["src/components/*"],
             "state/*": ["src/state/*"],
             "api/*": ["src/api/*"],
-            "App": ["src/App"]
+            "App": ["src/App"],
+            "app.config": ["src/app.config.js"]
         }
     },
     "exclude": ["node_modules", "dist"]

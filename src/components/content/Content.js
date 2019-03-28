@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter } from 'react-router-dom';
+import config from 'app.config';
 import ContentHeader from 'components/content/ContentHeader';
 import ContentNavigation from 'components/content/ContentNavigation';
 import ContentBody from 'components/content/ContentBody';
@@ -25,7 +26,7 @@ class Content extends Component {
         return (
             <ContentLayout>
                 <ContentHeader />
-                <BrowserRouter>
+                <BrowserRouter basename={config.routerBaseUrl}>
                     <React.Fragment>
                         <ContentNavigation />
                         <ContentBody />

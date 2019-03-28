@@ -2,12 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const base = '/~hitchcob/profile/';
+
 const config = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'main.js',
-        publicPath: '/'
+        publicPath: base
     },
     module: {
         rules: [
@@ -47,10 +49,19 @@ const config = {
         ]
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: {
+            rewrites: [{ from: /./, to: base }]
+        }
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src', 'index.html'),
+            variables: {
+                title: 'Braden Hitchcock',
+                base,
+                favicon: 'assets/favicon.ico'
+            }
+        }),
         new CopyPlugin([{ from: 'assets', to: 'assets' }])
     ]
 };

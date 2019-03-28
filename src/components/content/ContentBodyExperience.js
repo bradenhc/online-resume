@@ -51,8 +51,8 @@ const ExperienceEntry = ({ company, position, location, startDate, endDate, high
             </ul>
         </EntryContent>
         <TagList>
-            {tags.map(t => (
-                <Tag>{t}</Tag>
+            {tags.map((t, i) => (
+                <Tag key={i}>{t}</Tag>
             ))}
         </TagList>
     </ListEntryItem>
