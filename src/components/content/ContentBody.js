@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
-import ContentBodyEducation from 'components/content/ContentBodyEducation';
-import ContentBodyExperience from 'components/content/ContentBodyExperience';
-import ContentBodyProjects from 'components/content/ContentBodyProjects';
-import ContentBodyLeadership from 'components/content/ContentBodyLeadership';
-import ContentBodyHonors from 'components/content/ContentBodyHonors';
+import ContentBodySection from 'components/content/ContentBodySection';
 
 const ContentBodyContainer = styled.div`
-    padding: 15px;
+    
 `;
 
 class ContentBody extends Component {
@@ -17,19 +14,33 @@ class ContentBody extends Component {
     }
 
     render() {
+        const { navigation, sections, defaultRoute } = this.props;
+
         return (
             <ContentBodyContainer>
-                <Switch>
-                    <Route exact path="/" render={() => <Redirect to="/experience" />} />
-                    <Route path="/experience" component={ContentBodyExperience} />
-                    <Route path="/education" component={ContentBodyEducation} />
-                    <Route path="/projects" component={ContentBodyProjects} />
-                    <Route path="/leadership" component={ContentBodyLeadership} />
-                    <Route path="/honors-awards" component={ContentBodyHonors} />
-                </Switch>
+                {navigation ? (
+                    <Switch>
+                        <Route exact path="/" render={() => <Redirect to={defaultRoute} />} />
+                        {sections.map(s => (
+                            <Route key={s.name} path={s.route} render={() => <ContentBodySection section={s} />} />
+                        ))}
+                    </Switch>
+                ) : (
+                    <React.Fragment>
+                        {sections.map(s => (
+                            <ContentBodySection key={s.name} section={s} header={true} />
+                        ))}
+                    </React.Fragment>
+                )}
             </ContentBodyContainer>
         );
     }
 }
 
-export default ContentBody;
+const mapStateToProps = (state, { navigation }) => ({
+    sections: state.sections,
+    defaultRoute: state.defaultRoute,
+    navigation
+});
+
+export default connect(mapStateToProps)(ContentBody);

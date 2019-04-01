@@ -5,9 +5,9 @@ import config from 'app.config';
 import ContentHeader from 'components/content/ContentHeader';
 import ContentNavigation from 'components/content/ContentNavigation';
 import ContentBody from 'components/content/ContentBody';
+import media, { isTablet } from 'styles/media';
 
 const ContentLayout = styled.div`
-    margin-top: 50px;
     box-shadow: 0px 0px 4px ${({ theme }) => theme.colors.primary.dark};
     background-color: ${({ theme }) => theme.background.primary};
     min-height: 700px;
@@ -15,6 +15,9 @@ const ContentLayout = styled.div`
     width: 90%;
     max-width: 950px;
     margin-bottom: 50px;
+    ${media.tablet`
+        margin-top: 50px;
+    `}
 `;
 
 class Content extends Component {
@@ -26,12 +29,16 @@ class Content extends Component {
         return (
             <ContentLayout>
                 <ContentHeader />
-                <BrowserRouter basename={config.routerBaseUrl}>
-                    <React.Fragment>
-                        <ContentNavigation />
-                        <ContentBody />
-                    </React.Fragment>
-                </BrowserRouter>
+                {isTablet() ? (
+                    <BrowserRouter basename={config.routerBaseUrl}>
+                        <React.Fragment>
+                            <ContentNavigation />
+                            <ContentBody navigation={true} />
+                        </React.Fragment>
+                    </BrowserRouter>
+                ) : (
+                    <ContentBody navigation={false} />
+                )}
             </ContentLayout>
         );
     }

@@ -45,14 +45,15 @@ export default {
             url: 'https://www.facebook.com/bradenhc'
         }
     ],
+    defaultRoute: '/experience',
     sections: [
         {
             name: 'Experience',
             route: '/experience',
             content: [
                 {
-                    company: 'Oregon State University IoT Alliance',
-                    position: 'Web Developer/Community Coordinator',
+                    title: 'Oregon State University IoT Alliance',
+                    subtitle: 'Web Developer/Community Coordinator',
                     location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
@@ -72,8 +73,8 @@ export default {
                     url: 'http://groups.engr.oregonstate.edu/IOTA'
                 },
                 {
-                    company: 'Northrop Grumman',
-                    position: 'Software Development Intern',
+                    title: 'Northrop Grumman',
+                    subtitle: 'Software Development Intern',
                     location: 'Boulder, CO',
                     icon: {
                         type: 'image',
@@ -95,8 +96,8 @@ export default {
                     url: 'http://www.northropgrumman.com/'
                 },
                 {
-                    company: 'Brigham Young University Alumni Association',
-                    position: 'Web Developer',
+                    title: 'Brigham Young University Alumni Association',
+                    subtitle: 'Web Developer',
                     location: 'Provo, UT',
                     icon: {
                         type: 'image',
@@ -121,14 +122,14 @@ export default {
             route: '/education',
             content: [
                 {
-                    school: 'Oregon State University',
-                    degree: 'M.S. Computer Science - Software Innovation',
+                    subtitle: 'Oregon State University',
+                    title: 'M.S. Computer Science - Software Innovation',
                     location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
                         content: 'assets/images/icons/osu.jpg'
                     },
-                    gpa: '3.80',
+                    extra: '3.80 GPA',
                     startDate: 'September 2018',
                     endDate: 'March 2020',
                     highlights: [
@@ -138,14 +139,14 @@ export default {
                     url: 'https://oregonstate.edu/'
                 },
                 {
-                    school: 'Brigham Young University',
-                    degree: 'B.S. Computer Science',
+                    subtitle: 'Brigham Young University',
+                    title: 'B.S. Computer Science',
                     location: 'Provo, UT',
                     icon: {
                         type: 'image',
                         content: 'assets/images/icons/byu.png'
                     },
-                    gpa: '3.66',
+                    extra: '3.66 GPA',
                     startDate: 'September 2012',
                     endDate: 'April 2018',
                     highlights: [
@@ -173,7 +174,6 @@ export default {
                             'and MongoDB to facilitate goal-inspired interactions among users'
                     ],
                     tags: ['node', 'javascript', 'react', 'express', 'redux', 'mongo', 'manage'],
-                    code: 'https://github.com/synergy-gen',
                     url: 'https://synergen.us/'
                 },
                 {
@@ -188,7 +188,6 @@ export default {
                             'fellow students'
                     ],
                     tags: ['react', 'redux', 'sagas'],
-                    code: 'https://github.com/bradenhc/online-resume',
                     url: ''
                 }
             ]
@@ -199,7 +198,7 @@ export default {
             content: [
                 {
                     title: 'Volunteer Representative',
-                    organization: 'The Church of Jesus Christ of Latter-day Saints',
+                    subtitle: 'The Church of Jesus Christ of Latter-day Saints',
                     location: 'Daejeon, South Korea',
                     icon: {
                         type: 'image',
@@ -221,7 +220,14 @@ export default {
         {
             name: 'Honors & Awards',
             route: '/honors-awards',
-            content: ['Eagle Scout Award', 'U.S. Government issued secret security clearance']
+            content: [
+                {
+                    title: 'Eagle Scout Award'
+                },
+                {
+                    title: 'U.S. Government issued secret security clearance'
+                }
+            ]
         }
     ]
 };
