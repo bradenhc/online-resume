@@ -9,15 +9,15 @@ export default {
         phone: '(720) 899-1356',
         address: ''
     },
-    about:
-        'As an aspiring software architect, I am passionate about well-designed systems that ' +
-        'provide the highest levels of maintainability, flexibility, and efficiency. I have extensive experience ' +
-        'with microservice-oriented systems and implementing highly available ' +
-        'architectures. Most recently with my internship at Northrop Grumman, I was able to contribute to cutting ' +
-        'edge applications by researching state-of-the-art technologies and incorporating them into our software. ' +
-        'My professional experience consists primarily of designing and implementing flexible software systems, including ' +
-        'distributed system software architectures, websites, web applications, and online tools.',
-    image: 'assets/images/profile-formal-cropped.jpg',
+    about: `
+        Husband, father, avid coder, and aspiring software architect. I am passionate about well-designed, data-driven
+        distributed systems that showcase maintainability, flexibility, and efficiency. I have extensive experience 
+        designing microservice-oriented systems and assisting with the implementation of methods and processes that encourage
+        scalable software development. My experienced has blessed me with many opportunities to contribute to cutting
+        edge applications and research state-of-the-art technologies in an effort to protect our country and facilitate
+        its growth. Along the way I've had the privilege to build distributed data-processing frameworks, web-based 
+        applications, websites, and online tools.`,
+    image: 'assets/images/profile.jpg',
     banner: 'assets/images/banner.png',
     links: [
         {
@@ -52,15 +52,39 @@ export default {
             route: '/experience',
             content: [
                 {
-                    title: 'Oregon State University IoT Alliance',
-                    subtitle: 'Web Developer/Community Coordinator',
+                    title: 'Software Architect Intern',
+                    subtitle: 'Viewpoint Construction Software',
+                    location: 'Portland, OR',
+                    icon: {
+                        type: 'image',
+                        content: 'assets/images/icons/viewpoint.png'
+                    },
+                    startDate: 'June 2019',
+                    endDate: 'September 2019',
+                    highlights: [
+                        'Designed and implemented API management services in Azure Cloud, enabling the company to ' +
+                        'expose valuable data through public APIs as part of a larger cloud-platform strategy',
+                        'Developed processes and methods for the development, deployment, and integration of services ' +
+                        'exposing public APIs, faciliting the transition of legacy applications to microservices ' +
+                        'that allow third-party integration',
+                        'Assisted the design and discussion of a major decomposition of flagship applications into ' +
+                        'microservices connected via Apache Kafka',
+                        'Converted and improved a legacy service running on the .NET Framework to a microservice in ' +
+                        '.NET Core, furthering the goal of running all logic as microservices in Azure Cloud'
+                    ],
+                    tags: ['azure', 'api', 'rest', 'c#', '.net core', 'kafka', 'agile', 'scaled agile framework'],
+                    url: 'https://viewpoint.com/'
+                },
+                {
+                    title: 'Web Developer/Community Coordinator',
+                    subtitle: 'Oregon State University IoT Alliance',
                     location: 'Corvallis, OR',
                     icon: {
                         type: 'image',
                         content: 'assets/images/icons/osu.jpg'
                     },
                     startDate: 'January 2019',
-                    endDate: 'Present',
+                    endDate: 'June 2019',
                     highlights: [
                         'Led redesign of the legacy alliance website, moving away from Drupal to plain PHP to increase ' +
                             'maintainability',
@@ -73,8 +97,8 @@ export default {
                     url: 'http://groups.engr.oregonstate.edu/IOTA'
                 },
                 {
-                    title: 'Northrop Grumman',
-                    subtitle: 'Software Development Intern',
+                    title: 'Software Development Intern',
+                    subtitle: 'Northrop Grumman',
                     location: 'Boulder, CO',
                     icon: {
                         type: 'image',
@@ -92,12 +116,12 @@ export default {
                         'Designed and implemented front-end user interfaces in Angular and React for various company ' +
                             'projects, assisting the company in moving toward a cloud-centric environment'
                     ],
-                    tags: ['java', 'c++', 'node', 'javascript', 'react', 'angular', 'docker', 'kubernetes'],
+                    tags: ['java', 'c++', 'node', 'javascript', 'react', 'angular', 'docker', 'kubernetes', 'agile'],
                     url: 'http://www.northropgrumman.com/'
                 },
                 {
-                    title: 'Brigham Young University Alumni Association',
-                    subtitle: 'Web Developer',
+                    title: 'Web Developer',
+                    subtitle: 'Brigham Young University Alumni Association',
                     location: 'Provo, UT',
                     icon: {
                         type: 'image',
