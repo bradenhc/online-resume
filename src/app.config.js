@@ -1,3 +1,3 @@
 export default {
-    routerBaseUrl: '/~hitchcob/profile'
+    routerBaseUrl: '/'
 }

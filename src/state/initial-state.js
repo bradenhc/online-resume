@@ -11,10 +11,10 @@ export default {
     },
     about: `
         Husband, father, avid coder, and aspiring software architect. I am passionate about well-designed, data-driven
-        distributed systems that showcase maintainability, flexibility, and efficiency. I have extensive experience 
-        designing microservice-oriented systems and assisting with the implementation of methods and processes that encourage
+        distributed systems that showcase maintainability, flexibility, and efficiency. I have experience 
+        designing and building microservice-based systems and implementing methods that encourage
         scalable software development. My experienced has blessed me with many opportunities to contribute to cutting
-        edge applications and research state-of-the-art technologies in an effort to protect our country and facilitate
+        edge applications and research novel technologies in the pursuit of protecting our country and facilitating
         its growth. Along the way I've had the privilege to build distributed data-processing frameworks, web-based 
         applications, websites, and online tools.`,
     image: 'assets/images/profile.jpg',

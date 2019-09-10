@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const base = '/~hitchcob/profile/';
+const base = '';
 
 const config = {
     entry: path.join(__dirname, 'src', 'index.js'),

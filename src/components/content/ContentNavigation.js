@@ -35,11 +35,13 @@ class ContentNavigation extends Component {
     render() {
         const { sections } = this.props;
 
+        console.log(location);
+
         return (
             <ContentNavigationLayout>
                 {sections.map(section => (
                     <NavLink key={section.name} to={section.route} onClick={e => false}>
-                        <NavItem active={location.pathname.includes(section.route)}>
+                        <NavItem active={location.hash.includes(section.route)}>
                             <Text>{section.name}</Text>
                         </NavItem>
                     </NavLink>

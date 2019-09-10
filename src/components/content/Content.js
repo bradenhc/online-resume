@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import config from 'app.config';
 import ContentHeader from 'components/content/ContentHeader';
 import ContentNavigation from 'components/content/ContentNavigation';
@@ -15,8 +15,9 @@ const ContentLayout = styled.div`
     width: 90%;
     max-width: 950px;
     margin-bottom: 50px;
+    margin-top: 80px;
     ${media.tablet`
-        margin-top: 50px;
+        margin-top: 120px;
     `}
 `;
 
@@ -30,12 +31,12 @@ class Content extends Component {
             <ContentLayout>
                 <ContentHeader />
                 {isTablet() ? (
-                    <BrowserRouter basename={config.routerBaseUrl}>
+                    <HashRouter basename={config.routerBaseUrl}>
                         <React.Fragment>
                             <ContentNavigation />
                             <ContentBody navigation={true} />
                         </React.Fragment>
-                    </BrowserRouter>
+                    </HashRouter>
                 ) : (
                     <ContentBody navigation={false} />
                 )}

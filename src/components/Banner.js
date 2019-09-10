@@ -9,12 +9,7 @@ const BannerStyle = styled.div`
     width: 100%;
     height: 400px;
     background-color: #000;
-`;
-
-const BannerImage = styled.img`
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
+    background-image: linear-gradient(to bottom right, #001f3e, #002e5d);
 `;
 
 class Banner extends Component {
@@ -25,7 +20,6 @@ class Banner extends Component {
     render() {
         return (
             <BannerStyle>
-                <BannerImage src={this.props.image} />
             </BannerStyle>
         );
     }
