@@ -247,9 +247,6 @@ export default {
             content: [
                 {
                     title: 'Eagle Scout Award'
-                },
-                {
-                    title: 'U.S. Government issued secret security clearance'
                 }
             ]
         }
