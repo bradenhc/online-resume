@@ -1,15 +1,16 @@
 // @ts-nocheck
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import Text from 'styles/Text';
+import {paramCase} from 'change-case';
 
 const ContentNavigationLayout = styled.div`
-    align-self: stretch;
-    background-color: ${({ theme }) => theme.colors.primary.main};
-    display: flex;
-    align-items: center;
+  align-self: stretch;
+  background-color: ${({ theme }) => theme.colors.primary.main};
+  display: flex;
+  align-items: center;
 `;
 
 const NavItem = styled.div`
@@ -23,36 +24,23 @@ const NavItem = styled.div`
 `;
 
 const NavLink = styled(Link)`
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 `;
 
-class ContentNavigation extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const { sections } = this.props;
-
-        console.log(location);
-
-        return (
-            <ContentNavigationLayout>
-                {sections.map(section => (
-                    <NavLink key={section.name} to={section.route} onClick={e => false}>
-                        <NavItem active={location.hash.includes(section.route)}>
-                            <Text>{section.name}</Text>
-                        </NavItem>
-                    </NavLink>
-                ))}
-            </ContentNavigationLayout>
-        );
-    }
+function ContentNavigation({ location }) {
+  const sections = useSelector((state) => (state.resume ? state.resume.sections : []));
+  return (
+    <ContentNavigationLayout>
+      {sections.map((section) => (
+        <NavLink key={section.name} to={'/' + paramCase(section.name)} onClick={(e) => false}>
+          <NavItem active={location.hash.includes(paramCase(section.name))}>
+            <Text>{section.name}</Text>
+          </NavItem>
+        </NavLink>
+      ))}
+    </ContentNavigationLayout>
+  );
 }
 
-const mapStateToProps = state => ({
-    sections: state.sections
-});
-
-export default withRouter(connect(mapStateToProps)(ContentNavigation));
+export default withRouter(ContentNavigation);

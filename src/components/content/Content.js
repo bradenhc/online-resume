@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { HashRouter } from 'react-router-dom';
-import config from 'app.config';
 import ContentHeader from 'components/content/ContentHeader';
 import ContentNavigation from 'components/content/ContentNavigation';
 import ContentBody from 'components/content/ContentBody';
@@ -21,28 +20,22 @@ const ContentLayout = styled.div`
     `}
 `;
 
-class Content extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <ContentLayout>
-                <ContentHeader />
-                {isTablet() ? (
-                    <HashRouter basename={config.routerBaseUrl}>
-                        <React.Fragment>
-                            <ContentNavigation />
-                            <ContentBody navigation={true} />
-                        </React.Fragment>
-                    </HashRouter>
-                ) : (
-                    <ContentBody navigation={false} />
-                )}
-            </ContentLayout>
-        );
-    }
+function Content() {
+    return (
+        <ContentLayout>
+            <ContentHeader />
+            {isTablet() ? (
+                <HashRouter>
+                    <React.Fragment>
+                        <ContentNavigation />
+                        <ContentBody navigation={true} />
+                    </React.Fragment>
+                </HashRouter>
+            ) : (
+                <ContentBody navigation={false} />
+            )}
+        </ContentLayout>
+    );
 }
 
 export default Content;

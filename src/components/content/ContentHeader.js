@@ -1,47 +1,38 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
-    ContentHeaderLayout,
-    LeftHeaderContent,
-    ProfileImage,
-    RightHeaderContent,
-    NameHeading,
-    ContactText,
-    AboutText
+  ContentHeaderLayout,
+  LeftHeaderContent,
+  ProfileImage,
+  RightHeaderContent,
+  NameHeading,
+  ContactText,
+  AboutText,
 } from 'components/content/ContentHeader.styles';
 
-class ContentHeader extends Component {
-    constructor(props) {
-        super(props);
-    }
+function ContentHeader() {
+  // @ts-ignore
+  const resume = useSelector((state) => state.resume);
+  if (resume === null) {
+    return <>''</>;
+  }
 
-    render() {
-        const { name, image, email, phone, address, about } = this.props;
+  const { name, image, contact: { email, mobile, address }, about } = resume;
 
-        return (
-            <ContentHeaderLayout>
-                <LeftHeaderContent>
-                    <ProfileImage src={image} />
-                </LeftHeaderContent>
-                <RightHeaderContent>
-                    <NameHeading>{name}</NameHeading>
-                    <ContactText>{email}</ContactText>
-                    <ContactText>{phone}</ContactText>
-                    <ContactText>{address}</ContactText>
-                    <AboutText>{about}</AboutText>
-                </RightHeaderContent>
-            </ContentHeaderLayout>
-        );
-    }
+  return (
+    <ContentHeaderLayout>
+      <LeftHeaderContent>
+        <ProfileImage src={image} />
+      </LeftHeaderContent>
+      <RightHeaderContent>
+        <NameHeading>{name}</NameHeading>
+        <ContactText>{email}</ContactText>
+        <ContactText>{mobile}</ContactText>
+        <ContactText>{address}</ContactText>
+        <AboutText>{about}</AboutText>
+      </RightHeaderContent>
+    </ContentHeaderLayout>
+  );
 }
 
-const mapStateToProps = state => ({
-    name: state.name,
-    image: state.image,
-    email: state.contact.email,
-    phone: state.contact.phone,
-    address: state.contact.address,
-    about: state.about
-});
-
-export default connect(mapStateToProps)(ContentHeader);
+export default ContentHeader;

@@ -33,7 +33,6 @@ const iconStyle = `
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%;
-    background-color: #ccc;
     margin: 5px;
 `;
 

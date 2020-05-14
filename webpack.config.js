@@ -62,7 +62,7 @@ const config = {
                 favicon: 'assets/favicon.ico'
             }
         }),
-        new CopyPlugin([{ from: 'assets', to: 'assets' }])
+        new CopyPlugin([{ from: 'images', to: 'images' }, { from: 'data/resume.toml', to: 'resume.toml' }])
     ]
 };
 
