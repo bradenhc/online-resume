@@ -62,8 +62,14 @@ const config = {
                 favicon: 'assets/favicon.ico'
             }
         }),
-        new CopyPlugin([{ from: 'images', to: 'images' }, { from: 'data/resume.toml', to: 'resume.toml' }])
-    ]
+        new CopyPlugin({ patterns: [{ from: 'images', to: 'images' }, { from: 'data/resume.toml', to: 'resume.toml' }]})
+    ],
+    resolve: {
+        fallback: {
+            "stream": require.resolve("stream-browserify"),
+            "buffer": require.resolve("buffer/")
+        }
+    }
 };
 
 module.exports = config;
